@@ -1,0 +1,312 @@
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --VeryDarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  background-color: var(--VeryLightGray);
+}
+
+.top {
+  width: 100vw;
+  height: auto;
+  min-height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 2vh;
+}
+
+.top-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-header .main-header {
+  text-align: center;
+  font-weight: 100;
+  font-size: 2.8rem;
+}
+
+.top-header .sub-header {
+  text-align: center;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.top-caption {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  width: 70%;
+}
+
+.main-content {
+  margin-top: 2rem;
+  width: 100vw;
+  height: auto;
+  min-height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  width: 20rem;
+  height: 15rem;
+  background-color: white;
+  -webkit-box-shadow: 2px 4px 20px -10px var(--GrayishBlue);
+          box-shadow: 2px 4px 20px -10px var(--GrayishBlue);
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.card-content {
+  font-size: 0.8rem;
+}
+
+.card-img {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 2rem;
+}
+
+.card::before {
+  content: '';
+  border-top: 5px solid;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 10px;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.card-1 {
+  -webkit-animation: bringIn 0.5s 1 forwards;
+          animation: bringIn 0.5s 1 forwards;
+}
+
+.card-1::before {
+  border-color: var(--Cyan);
+}
+
+.card-2 {
+  -webkit-animation: bringIn 0.5s 0.1s 1 forwards;
+          animation: bringIn 0.5s 0.1s 1 forwards;
+}
+
+.card-2::before {
+  border-color: var(--Red);
+}
+
+.card-3 {
+  -webkit-animation: bringIn 0.5s 0.3s 1 forwards;
+          animation: bringIn 0.5s 0.3s 1 forwards;
+}
+
+.card-3::before {
+  border-color: var(--Orange);
+}
+
+.card-4 {
+  -webkit-animation: bringIn 0.5s 0.5s 1 forwards;
+          animation: bringIn 0.5s 0.5s 1 forwards;
+}
+
+.card-4::before {
+  border-color: var(--Blue);
+}
+
+.card:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 2px 4px 20px 0px var(--GrayishBlue);
+          box-shadow: 2px 4px 20px 0px var(--GrayishBlue);
+}
+
+@media only screen and (max-device-width: 1200px) {
+  .card {
+    width: 20rem;
+    height: 15rem;
+  }
+  .main-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .top {
+    min-height: 20vh;
+  }
+  .cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 100vw;
+  }
+  .top-header .main-header {
+    text-align: center;
+    font-weight: 100;
+    font-size: 1.4rem;
+  }
+  .top-header .sub-header {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+  .top-caption {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes bringIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bringIn {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=main.css.map */
